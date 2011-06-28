@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20110619035026) do
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "exerpt"
+    t.string   "excerpt"
     t.string   "location"
     t.integer  "user_id"
   end

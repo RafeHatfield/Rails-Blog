@@ -3,13 +3,13 @@
 one:
   title: MyString
   location: MyString
-  exerpt: MyString
+  excerpt: MyString
   body: MyText
   published_at: 2011-03-07 21:55:20
 
 two:
   title: MyString
   location: MyString
-  exerpt: MyString
+  excerpt: MyString
   body: MyText
   published_at: 2011-03-07 21:55:20
