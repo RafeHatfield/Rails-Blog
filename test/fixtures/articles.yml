@@ -10,6 +10,6 @@ one:
 two:
   title: MyString
   location: MyString
-  excerpt: MyString
+  exerpt: MyString
   body: MyText
   published_at: 2011-03-07 21:55:20
