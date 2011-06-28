@@ -12,6 +12,12 @@ class CommentsController < ApplicationController
 		end
 	end
 	
+	def new 
+		if request.xhr?
+			render :layout => false
+		end
+	end
+	
 	def destroy
 		@article = current_user.articles.find(params[:article_id])
 		@comment = @article.comments.find(params[:id])
