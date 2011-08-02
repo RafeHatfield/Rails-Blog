@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-	
 	before_filter :load_article, :except => :destroy
 	before_filter :authenticate, :only => :destroy
 	
@@ -17,13 +16,13 @@ class CommentsController < ApplicationController
 	    end
 		end
 	end
-	
-	def new 
-		if request.xhr?
-			render :layout => false
-		end
-	end
-	
+  # 
+  # def new 
+  #   if request.xhr?
+  #     render :layout => false
+  #   end
+  # end
+  # 
 	def destroy
 		@article = current_user.articles.find(params[:article_id])
 		@comment = @article.comments.find(params[:id])
