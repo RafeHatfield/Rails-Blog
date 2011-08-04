@@ -1,5 +1,11 @@
 class ArticlesController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :authenticate, :except => [:index, :show, :notify_friend]
+
+	def notify_friend
+		@article = Article.find(params[:id])
+		Notifier.email_friend(@article, params[:name], params[:email]).deliver
+		redirect_to @article, :notice => "Successfully sent a message to your friend"
+	end
 
   # GET /articles
   # GET /articles.xml
