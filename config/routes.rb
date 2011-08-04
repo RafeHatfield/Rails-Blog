@@ -2,6 +2,9 @@ Blog::Application.routes.draw do
 	root :to => "articles#index"
 	
   resources :articles do
+		member do
+			post :notify_friend
+		end
 		resources :comments
 	end
 	
@@ -25,7 +28,7 @@ Blog::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  # Sample resource route with options:
+  # Sample resource route with options:key => "value"			
   #   resources :products do
   #     member do
   #       get 'short'
