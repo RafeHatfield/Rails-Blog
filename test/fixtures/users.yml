@@ -2,8 +2,8 @@
 
 eugene:
   email: eugene@example.com
-  hashed_password: 3d63fb7d183e55fb577d1a19ecace5ac9487074e # => secret
+  hashed_password: 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4' # => secret
 
 lauren:
   email: lauren@example.com
-  hashed_password: a94a8fe5ccb19ba61c4c0873d391e987982fbbd3 # => secret
+  hashed_password: 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4' # => secret
