@@ -1,12 +1,6 @@
 class ArticlesController < ApplicationController
   before_filter :authenticate, :except => [:index, :show, :notify_friend]
 
-	def notify_friend
-		@article = Article.find(params[:id])
-		Notifier.email_friend(@article, params[:name], params[:email]).deliver
-		redirect_to @article, :notice => t('articles.notify_friend_success')
-	end
-
   # GET /articles
   # GET /articles.xml
   def index
@@ -68,7 +62,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to(@article, :notice => t.('articles.update_success')) }
+        format.html { redirect_to(@article, :notice => t('articles.update_success')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -88,4 +82,10 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def notify_friend
+    @article = Article.find(params[:id])
+    Notifier.email_friend(@article, params[:name], params[:email]).deliver
+    redirect_to @article, :notice => t('articles.notify_friend_success')
+  end  
 end
