@@ -5,6 +5,9 @@ Blog::Application.routes.draw do
 		member do
 			post :notify_friend
 		end
+		collection do
+		  get :search
+	  end
 		resources :comments
 	end
 	

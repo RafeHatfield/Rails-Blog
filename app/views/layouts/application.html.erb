@@ -19,6 +19,7 @@
         <%= link_to t('sessions.login'), login_path %>
       <% end %>
     </div>
+		<%= render 'articles/search' %>
   </div>
   <div id="main">
     <%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
@@ -26,7 +27,8 @@
     <%= yield %>
   </div>
   <div id="footer">
-    <%= t('general.footer') %> <a href="http://beginningrails.com">Beginning Rails 3</a>
+    <!--- <%= t('general.footer') %> <a href="http://beginningrails.com">Beginning Rails 3</a> --->
+		Rafe's Blog, Rafe's Blog, Party Time, Excellent, woo-woo-woo
   </div>
 </body>
 </html>
