@@ -8,6 +8,8 @@ gem 'rails', '3.0.4'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'pg'
 
+gem 'acts-as-taggable-on'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
