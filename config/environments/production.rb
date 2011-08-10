@@ -12,6 +12,16 @@ Blog::Application.configure do
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
+	#Gmail SMTP server setup
+	ActionMailer::Base.smtp_settings ={
+		:address => "smtp.gmail.com",
+		:enable_starttls_auto => "true",
+		:port => 587,
+		:authentication => :plain,
+		:user_name => "vandev2011@gmail.com",
+		:password => 'vancouver2011'
+	}
+
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
